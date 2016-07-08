@@ -1,0 +1,13 @@
+<%= form_for @special do |f| %>
+	<p><%= f.label :title %></p>
+	<p><%= f.text_field :title %></p>
+	<p><%= f.label :description %></p>
+	<p><%= f.text_area :description %></p>
+	<p><%= f.label :price %></p>
+	<p><%= f.number_field :price %></p>
+	<p><%= f.label :image %></p>
+	<%= f.file_field :image %>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

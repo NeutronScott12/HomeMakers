@@ -1,0 +1,24 @@
+<h2 class="title">Contact Us</h2>
+
+<% if user_signed_in? %>
+	<%= link_to "Upload Detail", new_contact_path %></h4>
+<% end %>
+
+<h3>Call us on:</h3>
+01753 692535
+ 
+<h3>Email:</h3>
+sfphomemakers@yahoo.co.uk
+ 
+<h3>Web Site:</h3>
+<div class="contact_link">
+	<a href="http://sfphomemakers.wix.com/sfphomemaker">http://sfphomemakers.wix.com/sfphomemaker</a>
+</div>
+
+<h3>Our Address is:</h3>
+167 Farnham Road,
+Slough,
+Berkshire,
+SL1 4XP
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCOHFWJpiCfSkg88OIl3DDW4lHYtrjmQfg'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://add-map.org/'>add google map</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=970b15fd21dea7b09e3e705a441b820ec5cf9bb0'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(51.5248321,-0.6153928999999607),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5248321,-0.6153928999999607)});infowindow = new google.maps.InfoWindow({content:'<strong>Home Makers </strong><br>Farnham Road<br>SL1 4XP Slough<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>

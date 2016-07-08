@@ -1,0 +1,42 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index_item {
+	float:right;
+	width:30%;
+	/*border:1px solid black;*/
+	text-align:center;
+	margin:1rem 1.5%;
+	.index_image {
+		height:200px;
+		overflow:hidden;
+		img {
+			width:100%;
+			border-radius:.3rem .3rem 0 0;
+		}
+	}
+	h3 {
+		margin:0;
+		font-weight:100;
+		padding:1rem 5%;
+		font-size:1.25rem;
+		background:#EEEEEE;
+		a {
+			text-decoration:none;
+			color:#333233;
+			&:hover {
+				color:#50A7C7;
+			}
+		}
+	}
+	a {
+		text-decoration:none;
+		&:hover {
+			color:grey;
+		}
+	}
+}
+
+
+

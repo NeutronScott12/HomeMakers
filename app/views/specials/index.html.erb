@@ -1,0 +1,29 @@
+<div class="special_header", id="clearfix">
+	<h2 id="clearfix">Special Offers</h2>
+	<% if user_signed_in? %>
+		<div class="headerlink">
+			<%= link_to "Upload Special Offer", new_special_path %>
+		</div>
+	<% end %>
+</div>
+
+
+<% @specials.each do |special| %>
+	<div class="special_content", id="clearfix">
+		<h3><%= special.title.titleize %></h3>
+		<%= image_tag special.image.url(:small) %>
+		<p class="special_description"><%= special.description %></p>
+		<p><%= number_to_currency(special.price, :precision => 2, :unit => "£") %></p>
+		<% if user_signed_in? %>
+			<div class="edit_delete", id="clearfix">
+				<%= link_to "Edit", edit_special_path(special) %>
+				<%= link_to "Delete", special_path(special), method: :delete, data: {confirm: "Are you sure?"} %>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+
+<div class="paginate", id="clearfix">
+	<p id="clearfix"><%= will_paginate @product, inner_window:1, outer_window:0 %></p>
+</div>
+

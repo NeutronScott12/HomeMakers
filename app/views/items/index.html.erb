@@ -1,0 +1,6 @@
+<% @items.each do |item| %>
+	<div class="index_item", id="clearfix">
+		<%= link_to (image_tag item.image.url(:small)), item, class:"index_image"%>
+		<h3><%= link_to item.title, item %></h3>
+	</div>
+<% end %>

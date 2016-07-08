@@ -1,0 +1,38 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product_content {
+	float:left;
+	width:30%;
+	border:1px solid #E4E4E4;
+	margin:1.5rem 1.5%;
+	padding:0;
+	background:#F8F9FA;
+	h3 {
+		text-align:center;
+		font-weight:100;
+		font-size:1.25rem;
+		background:#F8F9FA;
+	}
+	img {
+		width:100%;
+		height:200px;
+		overflow:hidden;
+	}
+	.product_numbers {
+		.currency {
+			float:left;
+		}
+		.stock {
+			float:right;
+		}
+	}
+	.edit_delete {
+		a {
+			color:grey;
+			text-decoration:none;
+			margin-right:1.5rem;
+		}
+	}
+}

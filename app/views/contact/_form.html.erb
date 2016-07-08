@@ -1,0 +1,14 @@
+<div class="form">
+	<%= form_for @contact do |f| %>
+		<%= f.label :PhoneNumber %>
+		<%= f.number_field :phone %>
+		<%= f.label :Email %>
+		<%= f.text_field :email %>
+		<%= f.label :Website %>
+		<%= f.text_field :website %>
+		<%= f.label :Adress %>
+		<%= f.text_field %>
+
+		<%= f.submit %>
+	<% end %>
+</div>

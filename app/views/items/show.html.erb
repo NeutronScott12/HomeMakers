@@ -1,0 +1,40 @@
+<div class="show_header" id="clearfix">
+	<h2 class="show_title"><%= @item.title %></h2>
+	<% if user_signed_in? %>
+		<div class="show_header_links">
+			<%# link_to "Upload Product", new_item_product_path(@item), class:"buttons" %>
+			<%= link_to "Edit", edit_item_path(@item), class:"buttons" %> 
+			<%= link_to "Delete", item_path(@item), method: :delete, data: {confirm:"Are you sure"}, class:"buttons" %>
+		</div>
+	<% end %>
+</div>
+
+<% if user_signed_in? %>
+	<h3>Upload Product</h3>
+	<%= render 'products/form' %>
+<% end %>
+
+<div class="product", id="clearfix">
+	<% @products.each do |product| %>
+		<div class="product_content", id="clearfix">
+			<h3><%= product.title.titleize %></h3>
+			<%= image_tag product.image.url(:small), class:"index_image" %>
+			<p>Description: <%= product.description %></p>
+			<div class="product_numbers", id="clearfix">
+				<p class="currency", id="clearfix"><%= number_to_currency(product.price, :precision => 2, :unit => "£") %>	
+				</p>
+				<p class="stock", id="clearfix">Stock: <%= product.stock %></p>
+			</div>
+			<% if user_signed_in? %>
+			<div class="edit_delete", id="clearfix">
+				<%= link_to "Edit", edit_item_product_path(product.item, product) %>
+				<%= link_to "Delete", [product.item, product], method: :delete, data: {confirm:"Are you sure?"} %>
+			</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
+
+<%# will_paginate @product %>
+
+

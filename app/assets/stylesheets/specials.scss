@@ -1,0 +1,62 @@
+// Place all the styles related to the specials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.special_header {
+	h2 {
+		float:left;
+	}
+	.headerlink {
+		float:right;
+		margin-top:1.6rem;
+		a {
+			text-decoration:none;
+			&:hover {
+				color:grey;
+			}
+		}
+	}
+}
+
+.special_content {
+	float:left;
+	width:30%;
+	border:1px solid #E4E4E4;
+	margin:1.5rem 1.5%;
+	padding:0;
+	background:#F8F9FA;
+	h3 {
+		text-align:center;
+		font-weight:100;
+		font-size:1.25rem;
+		background:#F8F9FA;
+	}
+	img {
+		width:100%;
+		height:200px;
+		overflow:hidden;
+	}
+	.edit_delete {
+		a {
+			text-decoration:none;
+			color:black;
+			margin-right:1.5rem;
+			&:hover {
+				color:grey;
+			}
+		}
+	}
+	.special_description {
+			line-height:1rem;
+			color:blue;
+		}
+}
+
+.field {
+	margin-top:1.5rem;
+}
+
+.actions {
+	margin:1.5rem 0;
+}

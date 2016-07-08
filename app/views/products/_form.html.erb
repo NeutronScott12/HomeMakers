@@ -1,0 +1,14 @@
+<%= form_for ([@item, @item.products.build]) do |f| %>
+	<p><%= f.label :title %></p>
+	<%= f.text_field :title %>
+	<p><%= f.label :description %></p>
+	<%= f.text_area :description %>
+	<p><%= f.label :price %></p>
+	<%= f.number_field :price %>
+	<p><%= f.label :stock %></p>
+	<%= f.number_field :stock %>
+	<p><%= f.label :image %></p>
+	<%= f.file_field :image %>
+
+	<p><%= f.submit("Upload Product") %></p>
+<% end %>
