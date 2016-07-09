@@ -23,7 +23,7 @@
 			<% if user_signed_in? %>
 			<%= link_to "Create Category", new_item_path %>
 			<% end %>
-			<%= link_to "Contact Us", contact_index_path %>
+			<%= link_to "Contact Us", contacts_path %>
 			<%= link_to "About Us", aboutus_path %>
 			<%= link_to "Special Offers", specials_path %>
 			<% if user_signed_in? %>
@@ -45,7 +45,7 @@
 <footer class="wrapper_slim", id="clearfix">
 	<p class="footer_content">&copy;Slough Furniture Project 2016 - <%= Date.today.year %> |
 		<%= link_to "Terms Of Use", termsofuse_index_path %>
-		| Registered Charity No 1152062
+		| Registered Charity No 1152062 | <a href="http://www.easyfundraising.org.uk" target="_blank">www.easyfundraising.org.uk</a><p><span>Created by Scott Berry &amp; donated to Slough Furniture Project</span></p>
 	</p>
 </footer>
 </body>

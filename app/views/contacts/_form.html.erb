@@ -1,0 +1,12 @@
+<%= form_for @contact do |f| %>
+	<p><%= f.label :phone %></p>
+	<%= f.text_field :phone %>
+	<p><%= f.label :email %></p>
+	<%= f.text_field :email %>
+	<p><%= f.label :website %></p>
+	<%= f.text_field :website %>
+	<p><%= f.label :address %></p>
+	<%= f.text_field :address %>
+
+	<p><%= f.submit %></p>
+<% end %>

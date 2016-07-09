@@ -1,8 +1,9 @@
-class ContactController < ApplicationController
+class ContactsController < ApplicationController
 
-	before_action :find_contact, only: [:create, :edit, :update, :delete]
+	before_action :find_contact, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index]
 
-	def index
+	def index 
 		@contacts = Contact.all.order("created_at DESC")
 	end
 
@@ -10,16 +11,16 @@ class ContactController < ApplicationController
 	end
 
 	def new
-		@contact = current_user.contacts.build
+		@contact = current_user.contact.build
 	end
 
 	def create
-		@contact = current_user.contacts.build(contact_params)
+		@contact = current_user.contact.build(contact_params)
 		if @contact.save
 			redirect_to @contact
 		else
 			render 'new'
-		end 
+		end
 	end
 
 	def edit
@@ -46,6 +47,7 @@ class ContactController < ApplicationController
 
 	def contact_params
 		params.require(:contact).permit(:phone, :email, :website, :address)
-	end
+	end	
+
 
 end

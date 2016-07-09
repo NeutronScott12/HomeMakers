@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-	before_action :find_product, only: [:edit, :update, :destroy]
+	before_action :find_product, only: [:show, :edit, :update, :destroy]
 	before_action :find_item_id, only: [:create, :edit, :update, :destroy]
 	before_action :authenticate_user!
 

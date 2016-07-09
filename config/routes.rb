@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :termsofuse, only: [:index]
 
-  resources :contact
+  resources :contacts
 
   get '/generalpages/:id', to: 'generalpages#aboutus'
 

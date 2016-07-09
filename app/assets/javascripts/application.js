@@ -28,4 +28,5 @@ $(document).ready(function(){
 	$(document).click(function(){
 		$(".header_links").removeClass('active')
 	})
+	return false
 });
