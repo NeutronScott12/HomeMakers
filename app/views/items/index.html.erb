@@ -1,3 +1,12 @@
+<div class="category_links", id="clearfix">
+	<%= link_to "All Products", root_path, class: "all_product" %>
+		<!--<button class="category_button">Categories</button>-->
+			<% Category.all.each do |category| %>
+			<!-- <ul id="clearfix"> -->
+				<%= link_to category.name, items_path(category: category.name) %>
+			<% end %>
+</div>
+
 <% @items.each do |item| %>
 	<div class="index_item", id="clearfix">
 		<%= link_to (image_tag item.image.url(:small)), item, class:"index_image"%>

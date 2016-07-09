@@ -1,5 +1,7 @@
 <div class="form">
 	<%= form_for @item do |f| %>
+		<%= f.label :category %>
+		<%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a Category"} %>
 		<p><%= f.label :title %></p>
 		<%= f.text_field :title %>
 		<p><%= f.label :image %></p>
